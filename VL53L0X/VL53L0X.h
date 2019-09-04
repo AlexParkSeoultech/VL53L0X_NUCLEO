@@ -108,7 +108,7 @@ class VL53L0X
     enum applicationType{ SHORT_ACCURATE, SHORT_FAST, LONG_ACCURATE, LONG_FAST};
     uint8_t last_status; // status of last I2C transmission
 
-    VL53L0X(PinName SDA,PinName SCL, PinName GPIO=NC);
+    VL53L0X(PinName SDA,PinName SCL, PinName INTRT=NC);
     void setApplication(applicationType mode=SHORT_ACCURATE);
     void setAddress(uint8_t new_addr);
     inline uint8_t getAddress(void) { return address; }
