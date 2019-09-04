@@ -58,9 +58,9 @@
 //  , io_timeout(0) // no timeout
 //  , _wasTimeout(false)
 //{}
-VL53L0X::VL53L0X(PinName SDA,PinName SCL, PinName GPIO)
+VL53L0X::VL53L0X(PinName SDA,PinName SCL, PinName INTRT)
   : _i2c(SDA,SCL)
-  , _int(GPIO)
+  , _int(INTRT)
   , address(ADDRESS_DEFAULT<<1)
   , io_timeout(0) // no timeout
   , _range(0)
